@@ -1,6 +1,14 @@
 import os
 clear = lambda: os.system('cls')
 clear()
+
+#####
+# 
+# possibilité de faire juste avec des variable au lieu de valeur algébrique
+#
+#####
+
+
 class main():
     #value
     xe = [float, float]
@@ -17,8 +25,9 @@ class main():
     line = "-"
     epaisseur = 10
     hauteur = 3
+    
+    
     def __init__(self) -> None:
-        self.main()
         pass
     def gen_image(self, dipotre_nb):
         j = 0
@@ -82,23 +91,26 @@ class main():
             print(line)    
         
 
-    def main(self):
+    def start(self):
 
         ask_nb_dioptre = int(input("Combien y'a t'il de dioptre ? -> "))
         print("Veuillez donc confirmer que votre représentation prend cette forme :" + "\n")
         self.gen_image(ask_nb_dioptre)
         
+        # ask value of radius
         for i in range(ask_nb_dioptre):
             valeur = int(input(f"Veuillez indiquer la valeur de S{i}C{i} : "))
             self.list_of_rayon.append(valeur)
         clear()
         self.gen_image(ask_nb_dioptre)
-
+        
+        # ask value of the indices
         for i in range(ask_nb_dioptre+1):
             valeur = float(input(f"Veuillez indiquer la valeur de n{i} : "))
             self.list_of_indice.append(valeur)
         self.dipotre_nb = ask_nb_dioptre
-
+        
+        # ask distance between dioptre
         valeur = float(input("Veuillez indiquer la distance AS0 (peut etre nulle) : "))
         self.list_of_distance.append(valeur)
         for i in range(ask_nb_dioptre):
@@ -109,15 +121,19 @@ class main():
                 valeur = float(input(f"Veuillez indiquer la distance S{i}A' (peut etre nulle) : "))
                 self.list_of_distance.append(valeur)
 
+        # ask xe and alpha e (start point)
         r = float(input("veuillez entrez la partie réelle de xe : "))
         i = float(input("veuillez entrez la partie immaginaire de xe : "))
         self.xe = [r,i]
         r = float(input("veuillez entrez la partie réelle de alphae : "))
         i = float(input("veuillez entrez la partie immaginaire de alphae : ")) 
         self.alphae = [r,i]
+        
+        #define xs and alphas
         xs = [float, float]
-        nsalphas = [float, float]
         alphas  = [float, float]
+        
+        # auto programm
         for i in range(ask_nb_dioptre*2+1):
             if i%2==0:
                 result = self.translation(self.list_of_distance[int(i/2)], self.list_of_indice[int(i/2)], self.xe, self.alphae)
@@ -129,11 +145,12 @@ class main():
             else : 
                 result = self.refraction(self.list_of_rayon[int((i-1)/2)], self.list_of_distance[int((i-1)/2)], self.list_of_distance[int((i-1)/2)+1], self.xe, self.alphae)
                 xs = result[0][0]
-                alphas[0] = result[1][0][0]/self.list_of_indice[int((i-1)/2)+1]
-                alphas[1] = result[1][0][1]/self.list_of_indice[int((i-1)/2)+1]
+                alphas[0] = result[1][0][0]/self.list_of_indice[int((i-1)/2)+1] # get R(alphas) by R(nsalphas) /ns
+                alphas[1] = result[1][0][1]/self.list_of_indice[int((i-1)/2)+1] # get Im(alphas) by Im(nsalphas) /ns
                 self.xe = xs
                 self.alphae = alphas
         print(xs)
+        wait = input()
         pass
 
     def translation(self, e:float, ne:float, xe:[float, float], alphae:[float, float]):
@@ -144,7 +161,7 @@ class main():
         xs = [xe[0]+ alphae[0]*e, xe[1]+ alphae[1]*e] #new value of xs
 
         matrice_sortie = [[xs],[ns_alphas]]# matrice 2*1
-        print(f"translation !")
+        print("translation !")
         return matrice_sortie
 
     def refraction(self, R:float, ne:float, ns:float, xe:[float, float], alphae:[float, float]):
@@ -155,8 +172,9 @@ class main():
 
         matrice_sortie = [[xs],[ns_alphas]] #matrice 2*1
 
-        print(f"refraction !")
+        print("refraction !")
         return matrice_sortie
 
 
-a = main()
+run = main()
+run.start()
