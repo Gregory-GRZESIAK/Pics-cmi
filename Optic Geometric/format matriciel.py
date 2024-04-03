@@ -153,9 +153,9 @@ class main():
         wait = input()
         pass
 
-    def translation(self, e:float, ne:float, xe:[float, float], alphae:[float, float]):
+    def translation(self, e:float, ne:float, xe, alphae):
         
-        ns_alphas : [float, float] = [ne*alphae[0], ne*alphae[1]] # ne = ns = n and alphae = alphas (in complex mode)
+        ns_alphas = [ne*alphae[0], ne*alphae[1]] # ne = ns = n and alphae = alphas (in complex mode)
 
         xs = [float, float] # xs in complex mode
         xs = [xe[0]+ alphae[0]*e, xe[1]+ alphae[1]*e] #new value of xs
@@ -164,11 +164,11 @@ class main():
         print("translation !")
         return matrice_sortie
 
-    def refraction(self, R:float, ne:float, ns:float, xe:[float, float], alphae:[float, float]):
+    def refraction(self, R:float, ne:float, ns:float, xe, alphae):
 
-        xs :[float, float] = xe # xs in complex mode
+        xs = xe # xs in complex mode
 
-        ns_alphas :[float, float] = [ne*alphae[0]-((ns-ne)/R)*xe[0], ne*alphae[1]-((ns-ne)/R)*xe[1]] # in complex mode
+        ns_alphas = [ne*alphae[0]-((ns-ne)/R)*xe[0], ne*alphae[1]-((ns-ne)/R)*xe[1]] # in complex mode
 
         matrice_sortie = [[xs],[ns_alphas]] #matrice 2*1
 
