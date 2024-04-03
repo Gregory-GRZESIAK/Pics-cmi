@@ -29,15 +29,15 @@ class systemecentree():
 
     def start(self):
         for i in range(self.nb_dioptre):
-            valeur = float(input(f"Veuillez indiquer la valeur de S{i}C{i} : "))
+            valeur = float(input("Veuillez indiquer la valeur de S{}C{} : ".format(i,i)))
             self.list_of_rayon.append(valeur)
 
         for i in range(self.nb_dioptre+1):
-            valeur = float(input(f"Veuillez indiquer la valeur de n{i} : "))
+            valeur = float(input("Veuillez indiquer la valeur de n{} : ".format(i)))
             self.list_of_indice.append(valeur)
 
         for i in range(self.nb_dioptre-1):
-            valeur = float(input(f"Veuillez indiquer la valeur de S{i}S{i+1} : "))
+            valeur = float(input("Veuillez indiquer la valeur de S{}S{} : ".format(i, i+1)))
             self.list_of_distance.append(valeur)
 
         for i in range(self.nb_dioptre*2-1):
@@ -72,10 +72,10 @@ class systemecentree():
         print(self.matrice_transfert[0])
         print(self.matrice_transfert[1])
 
-        print(f"EHo : {self.EHo},    ENo : {self.ENo}")
-        print(f"SHi : {self.SHi},    SNi : {self.SNi}")
-        print(f"HoNo : {-self.EHo+self.ENo},     HiNi : {-self.SHi+self.SNi},   fo+fi={self.fo+self.fi}")
-        print(f"EFo : {self.fo*self.matrice_transfert[1][1]},    SFi : {self.fi*self.matrice_transfert[0][0]}")
+        print("EHo : {},    ENo : {}".format(self.EHo,self.ENo))
+        print("SHi : {},    SNi : {}".format(self.SHi,self.SNi))
+        print("HoNo : {},     HiNi : {},   fo+fi={}".format(-self.EHo+self.ENo,-self.SHi+self.SNi,self.fo+self.fi))
+        print("EFo : {},    SFi : {}".format(self.fo*self.matrice_transfert[1][1],self.fi*self.matrice_transfert[0][0]))
 
 a = systemecentree()
 a.start()
