@@ -7,7 +7,7 @@ Ce programme vous permet de déterminer les éléments cardinaux d'un système c
 
 ## 🚩 A venir
 
-- Dioptre plan (rayon de courbure infini)
+- Dioptre plan (rayon de courbure infini) (05/04/2024)
 - Vue 2d dans la console du système
 - Adaptation des textes en fonction des lentilles/dioptres 
 - Adaptation des textes pour une bonne lisibilité sur calculatrice
