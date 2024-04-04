@@ -19,9 +19,12 @@ class systemecentree():
         return result
     
     def get_matrice_translation(self, e, n):
+        print(f"translation ! n : {n}")
         return [[1, e/n], [0, 1]]
     
     def get_matrice_refraction(self, n1, n2, R):
+        print("refraction !")
+        print(f"n1 : {n1}, n2: {n2}")
         if n1!=n2:
             return [[1, 0], [-(n2-n1)/R, 1]]
         else : 
@@ -42,10 +45,10 @@ class systemecentree():
 
         for i in range(self.nb_dioptre*2-1):
             if i%2!=0:
-                result = self.get_matrice_translation(self.list_of_distance[int(i/2)], self.list_of_indice[int(i/2)])
+                result = self.get_matrice_translation(self.list_of_distance[int(i/2)], self.list_of_indice[int(i/2)+1])
                 
             else : 
-                result =self.get_matrice_refraction(self.list_of_indice[i-1], self.list_of_indice[i], self.list_of_rayon[int((i)/2)])
+                result =self.get_matrice_refraction(self.list_of_indice[int(i/2)], self.list_of_indice[int(i/2)+1], self.list_of_rayon[int((i)/2)])
             self.list_of_matrice.append(result)
         self.list_of_matrice.reverse()
         tempo = 0
