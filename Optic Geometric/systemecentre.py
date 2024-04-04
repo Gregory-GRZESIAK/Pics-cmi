@@ -1,6 +1,4 @@
-import os
-clear = lambda: os.system('cls')
-clear()
+
 class systemecentree():
 
     list_of_rayon= []
