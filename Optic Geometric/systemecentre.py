@@ -1,4 +1,6 @@
-
+import os
+clear = lambda: os.system('cls')
+clear()
 class systemecentree():
 
     list_of_rayon= []
@@ -6,7 +8,7 @@ class systemecentree():
     list_of_distance = []
     list_of_matrice = []
 
-    nb_dioptre = 2
+    nb_dioptre = int(input("Combien de dioptre posséde le système ? -> "))
 
     def __init__(self) -> None:
         pass
@@ -18,12 +20,11 @@ class systemecentree():
         return result
     
     def get_matrice_translation(self, e, n):
-        print(f"translation ! n : {n}")
+
         return [[1, e/n], [0, 1]]
     
     def get_matrice_refraction(self, n1, n2, R):
-        print("refraction !")
-        print(f"n1 : {n1}, n2: {n2}")
+
         if n1!=n2:
             return [[1, 0], [-(n2-n1)/R, 1]]
         else : 
@@ -31,7 +32,7 @@ class systemecentree():
 
     def start(self):
         for i in range(self.nb_dioptre):
-            valeur = float(input("Veuillez indiquer la valeur de la distance focale f{} de la lentile L{} : ".format(i,i)))
+            valeur = float(input("Veuillez indiquer la valeur de la distance focale f{} de la lentile L{} (ou alors le rayon de courbure du dioptre): ".format(i,i)))
             self.list_of_rayon.append(valeur)
 
         for i in range(self.nb_dioptre+1):
@@ -69,7 +70,7 @@ class systemecentree():
         self.SNi = round(self.fi*(self.matrice_transfert[0][0]-(indice_before/indice_after)),2)
         self.EFo = round(self.fo*self.matrice_transfert[1][1],2)
         self.SFi = round(self.fi*self.matrice_transfert[0][0],2)
-
+        print("")
         print("Matrice transfert : ")
         print(self.matrice_transfert[0])
         print(self.matrice_transfert[1])
