@@ -11,7 +11,6 @@ class systemecentree():
     def __init__(self) -> None:
         pass
 
-
     def multiply_matrice_two_by_two(self, first, second):
         "Formule obtenue via le site https://geekflare.com/multiply-matrices-in-python/"
         result = [[sum(a*b for a,b in zip(A_row, B_col)) for B_col in zip(*second)] 
@@ -32,7 +31,7 @@ class systemecentree():
 
     def start(self):
         for i in range(self.nb_dioptre):
-            valeur = float(input("Veuillez indiquer la valeur de S{}C{} : ".format(i,i)))
+            valeur = float(input("Veuillez indiquer la valeur de la distance focale f{} de la lentile L{} : ".format(i,i)))
             self.list_of_rayon.append(valeur)
 
         for i in range(self.nb_dioptre+1):
