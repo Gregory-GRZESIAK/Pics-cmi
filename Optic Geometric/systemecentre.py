@@ -10,7 +10,7 @@ class systemecentree():
 
     def __init__(self) -> None:
         pass
-
+    
     def multiply_matrice_two_by_two(self, first, second):
         "Formule obtenue via le site https://geekflare.com/multiply-matrices-in-python/"
         result = [[sum(a*b for a,b in zip(A_row, B_col)) for B_col in zip(*second)] 
@@ -22,11 +22,13 @@ class systemecentree():
         return [[1, e/n], [0, 1]]
     
     def get_matrice_refraction(self, n1, n2, R):
-
-        if n1!=n2:
-            return [[1, 0], [-(n2-n1)/R, 1]]
-        else : 
-            return [[1, 0], [-1/R, 1]]
+        if R!=0:
+            if n1!=n2:
+                return [[1, 0], [-(n2-n1)/R, 1]]
+            else : 
+                return [[1, 0], [-1/R, 1]]
+        else: 
+            return[[1,0],[0,1]]
 
     def start(self):
         for i in range(self.nb_dioptre):
