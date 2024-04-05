@@ -31,7 +31,7 @@ Et voilà ! Rien de plus compliqué, la matrice de transfert vous est envoyé ai
 
 Ce programme fonctionne aussi bien sur console python depuis un ordinateur mais également sur calculatrice ! 
 
-Sur ordinateur il suffit simplement d'installer la dernière version de [Python](https://www.python.org/downloads/), de télécharger le fichier `systemecentre.py` et de faire un double click dessus. A la fin de l'execution il y a un input invisible pour ne pas fermer la console et vous laisser le temps de voir les résultats. Pensez donc bien a fermer le programme une fois son utilisation fini ! Si vous pensez qu'ouvrir un fichier `txt` avec les résultats est mieux, n'hésitez pas à me le faire remonter !
+Sur ordinateur il suffit simplement d'installer la dernière version de [Python](https://www.python.org/downloads/), de télécharger le fichier `systemecentrecalculatrice.py` et de faire un double click dessus. A la fin de l'execution il y a un input invisible pour ne pas fermer la console et vous laisser le temps de voir les résultats. Pensez donc bien a fermer le programme une fois son utilisation fini ! Si vous pensez qu'ouvrir un fichier `txt` avec les résultats est mieux, n'hésitez pas à me le faire remonter !
 
 Sur calculatrice, réferrez vous simplement a la documentation du modèle de votre calculatrice ! 
 ## Feedback
