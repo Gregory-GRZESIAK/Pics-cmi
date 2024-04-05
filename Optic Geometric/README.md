@@ -8,8 +8,7 @@ Ce programme vous permet de déterminer les éléments cardinaux d'un système c
 ## 🚩 A venir
 
 - Vue 2d dans la console du système
-- Adaptation des textes en fonction des lentilles/dioptres 
-- Adaptation des textes pour une bonne lisibilité sur calculatrice
+- Miroir sphérique et Miroir plan
 
 
 ## ❓ Comment ça fonctionne ?
