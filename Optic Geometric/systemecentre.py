@@ -38,7 +38,7 @@ class systemecentree():
         for i in range(self.nb_dioptre+1):
             valeur = float(input("Veuillez indiquer la valeur de n{} : ".format(i)))
             self.list_of_indice.append(valeur)
-
+        
         for i in range(self.nb_dioptre-1):
             valeur = float(input("Veuillez indiquer la valeur de S{}S{} : ".format(i, i+1)))
             self.list_of_distance.append(valeur)
@@ -70,6 +70,7 @@ class systemecentree():
         self.SNi = round(self.fi*(self.matrice_transfert[0][0]-(indice_before/indice_after)),2)
         self.EFo = round(self.fo*self.matrice_transfert[1][1],2)
         self.SFi = round(self.fi*self.matrice_transfert[0][0],2)
+
         print("")
         print("Matrice transfert : ")
         print(self.matrice_transfert[0])
