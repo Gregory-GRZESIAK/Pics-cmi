@@ -75,8 +75,10 @@ class systemecentree():
         print(self.matrice_transfert[0])
         print(self.matrice_transfert[1])
         print('fo : {}, fi : {}'.format(self.fo, self.fi))
-        print("EHo : {}, ENo : {}".format(self.EHo,self.ENo))
-        print("SHi : {}, SNi : {}".format(self.SHi,self.SNi))
+        print("EHo : {}".format(self.EHo))
+        print("ENo : {}".format(self.ENo))
+        print("SHi : {}".format(self.SHi))
+        print("SNi : {}".format(self.SNi))
         print("HoNo : {}, HiNi : {},   fo+fi={}".format(-self.EHo+self.ENo,-self.SHi+self.SNi,self.fo+self.fi))
         print("EFo : {}, SFi : {}".format(self.fo*self.matrice_transfert[1][1],self.fi*self.matrice_transfert[0][0]))
 
