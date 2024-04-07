@@ -38,7 +38,7 @@ class systemecentree():
         for i in range(self.nb_dioptre+1):
             valeur = float(input("Veuillez indiquer la valeur de n{} : ".format(i)))
             self.list_of_indice.append(valeur)
-        
+
         for i in range(self.nb_dioptre-1):
             valeur = float(input("Veuillez indiquer la valeur de S{}S{} : ".format(i, i+1)))
             self.list_of_distance.append(valeur)
@@ -84,3 +84,4 @@ class systemecentree():
 a = systemecentree()
 a.start()
 a.calc_and_print_result()
+input()
