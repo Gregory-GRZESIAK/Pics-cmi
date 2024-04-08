@@ -32,15 +32,15 @@ class systemecentree():
 
     def start(self):
         for i in range(self.nb_dioptre):
-            valeur = float(input("f{}/S{}C{} : ".format(i,i, i)))
+            valeur = float(input("f{}/S{}C{} ? : ".format(i,i, i)))
             self.list_of_rayon.append(valeur)
 
         for i in range(self.nb_dioptre+1):
-            valeur = float(input("n{} : ".format(i)))
+            valeur = float(input("n{} ? : ".format(i)))
             self.list_of_indice.append(valeur)
 
         for i in range(self.nb_dioptre-1):
-            valeur = float(input("S{}S{} : ".format(i, i+1)))
+            valeur = float(input("S{}S{} ? : ".format(i, i+1)))
             self.list_of_distance.append(valeur)
 
         for i in range(self.nb_dioptre*2-1):
