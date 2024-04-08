@@ -92,15 +92,14 @@ class systemecentree():
 
         tempo = True
         while tempo :
-            suite = input("Point objet? 1/0 (y/n) -> ")
+            suite = input("Objet? 1/0 (y/n) -> ")
             if suite == "y" or suite =="1":
                 tempo = False
                 self.calc_and_print_image()
             elif suite == "n" or suite =="0":
                 tempo = False
-                print("non")
             else : 
-                print("Entre une valeur correcte")
+                print("Incorrecte")
     
     def calc_and_print_image(self):
         self.EAo = float(input("EAo ? : "))
