@@ -120,7 +120,8 @@ class systemecentree():
                 self.Matrice_AoAi[i][j] = round(self.Matrice_AoAi[i][j],3)
 
         print("-------------------------------")
-        print("po : {},  pi : {}".format(round(self.po,3), round(self.pi,3)))
+        print("po : {}".format(round(self.po,3)))
+        print("pi : {}".format(round(self.pi,3)))
         print("Gt (pi/po): {}".format(round(self.Gt,3)))
         print("Matrice AoAi : ")
         print(self.Matrice_AoAi[0])
