@@ -85,4 +85,3 @@ class systemecentree():
 a = systemecentree()
 a.start()
 a.calc_and_print_result()
-input()
