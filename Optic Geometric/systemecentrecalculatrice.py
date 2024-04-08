@@ -92,7 +92,7 @@ class systemecentree():
 
         tempo = True
         while tempo :
-            suite = input("Souhaitez vous utiliser un point objet ? y/n (1/0) -> ")
+            suite = input("Point objet ? y/n (1/0) -> ")
             if suite == "y" or suite =="1":
                 tempo = False
                 self.calc_and_print_image()
@@ -103,7 +103,7 @@ class systemecentree():
                 print("Entre une valeur correcte")
     
     def calc_and_print_image(self):
-        self.EAo = float(input("Quel est la distance EAo ? : "))
+        self.EAo = float(input("EAo ? : "))
 
         self.po = - self.EHo + self.EAo
         self.pi = (self.po*self.list_of_indice[-1])/(-self.matrice_transfert[1][0]*self.po+self.list_of_indice[0])
@@ -125,6 +125,7 @@ class systemecentree():
         print("Matrice AoAi : ")
         print(self.Matrice_AoAi[0])
         print(self.Matrice_AoAi[1])
+
 a = systemecentree()
 a.start()
 a.calc_and_print_result()
