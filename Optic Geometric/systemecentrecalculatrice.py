@@ -6,7 +6,7 @@ class systemecentree():
     list_of_distance = []
     list_of_matrice = []
 
-    nb_dioptre = int(input("Nombre de dioptre : "))
+    nb_dioptre = int(input("Nb dioptre : "))
 
     def __init__(self) -> None:
         pass
@@ -92,7 +92,7 @@ class systemecentree():
 
         tempo = True
         while tempo :
-            suite = input("Point objet ? y/n (1/0) -> ")
+            suite = input("Point objet? 1/0 (y/n) -> ")
             if suite == "y" or suite =="1":
                 tempo = False
                 self.calc_and_print_image()
